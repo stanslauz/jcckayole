@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>gallery</title>
+    <meta name="description" content="The church of excellence" />
+    <meta name="keywords" content="church" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff"
+      http-equiv="Content-Type"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="/assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Font Awesome CSS -->
+    <link
+      href="/assets/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Include all css plugins (below), or include individual files as needed -->
+    <link href="/assets/css/flickity.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="/assets/css/magnific-popup.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Theme CSS -->
+    <!-- <link href="/assets/css/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="/assets/css/gallery.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Color Scheme CSS -->
+    <link href="/assets/css/color_red.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/kayole/assets/images/favicon-32x32.png" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation Start -->
+     <nav
+    id="navigation"
+    class="navbarPaged  navbar-expand-lg  fixed-topPaged"
+  >
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand page-scroll" href="/index.html">
+          <img
+            src="/assets/images/church.jpg"
+            alt="jcc"
+            class="logo-text-white logo-large"
+          />
+          <img
+            src="/assets/images/church.jpg"
+            alt="jcce"
+            class="logo-small logo-text-white"
+          />
+        </a>
+
+        <span class='font-w-800 text-extra-large text-uppercase navTitle'>Gallery</span>
+      </div>
+
+
+  
+      
+      <div
+        class="navbar-collapse collapse flex-row-reverse"
+        id="navbar-kania"
+      >    
+       
+      </div>
+
+
+    </div>
+   
+  </nav> 
+     
+
+
+
+  <div id="sidle">
+      <img class="pic" src="/assets/images/gallery/gallery1.jpg" alt="">
+      <img class="pic" src="/assets/images/gallery/gallery2.jpg" alt>
+      <img class="pic" src="/assets/images/gallery/gallery3.jpg" alt>
+      <img src="/assets/images/gallery/gallery4.jpg" alt>
+      <img src="/assets/images/gallery/gallery5.jpg" alt>
+      <img src="/assets/images/gallery/gallery6.jpg" alt>
+      <img src="/assets/images/gallery/gallery7.jpg" alt>
+      <img src="/assets/images/gallery/gallery8.jpg" alt>
+      <img src="/assets/images/gallery/gallery9.jpg" alt>
+      <img src="/assets/images/gallery/gallery10.jpg" alt>
+      <img src="/assets/images/gallery/gallery11.jpg" alt>
+      <img src="/assets/images/gallery/gallery12.jpg" alt>
+      <img src="/assets/images/gallery/gallery13.jpg" alt>
+      <img src="/assets/images/gallery/gallery14.jpg" alt>
+
+  
+  </div>
+
+
+
+    <!-- //Footer End -->
+
+    <!-- Scroll to top -->
+    <a href="#page-top" class="page-scroll scroll-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+   
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- <script src="assets/js/popper.min.js"></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Include all js plugins (below) -->
+    <!-- <script src="assets/js/pace.min.js"></script> -->
+     <script src="assets/js/jquery.easing.min.js"></script> 
+    <!-- <script src="assets/js/jquery.matchHeight.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.inview.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.countTo.js"></script> -->
+    <!-- <script src="assets/js/imagesloaded.pkgd.min.js"></script> -->
+    <!-- <script src="assets/js/flickity.pkgd.min.js"></script> -->
+    <!-- <script src="assets/js/isotope.pkgd.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.magnific-popup.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.validate.min.js"></script> --> -->
+
+    <!-- BG Parallax -->
+    <script src="assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="assets/js/ScrollMagic.min.js"></script>
+    <script src="assets/js/animation.gsap.min.js"></script>
+    <script src="../apis.google.com/js/platform.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.js"></script>
+
+    <script>
+      document.addEventListener('keydown', function(e){
+        console.log(e.key)
+        if(e.key == 'Escape'){
+          console.log(document.head)
+        }
+      });
+
+
+
+      //imaging
+
+      const imageArea = document.getElementById("sidle"),
+images = imageArea.getElementsByTagName("img");
+
+
+if (images.length > 1) {
+	for (var i = 0; i < images.length; i++) {
+		let topEdge = ((100 / images.length) * i) + 1,
+		bottomEdge = (topEdge + (100 / images.length)) - 1;
+		images[i].style.clipPath = `polygon(0% ${topEdge}%, 100% ${topEdge}%, 100% ${bottomEdge}%, 0% ${bottomEdge}%)`;
+	}
+	imageArea.classList.add("slide");
+
+	function slide(imgTarget, direction) {
+					 let slidy = imgTarget.animate([
+							{ transform: 'translateX(0%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' }
+						], {
+						duration: 667,
+						easing: 'linear',
+						fill: 'forwards',
+						direction: direction
+				 });
+				 imgTarget.classList.toggle("full");
+	}
+
+// ///////////////////
+
+
+
+const func = (pic) => {
+  
+  // pics.forEach(pic => {
+  // console.log(pic)
+  
+
+  let fullImage = document.querySelector(".full");
+		if (fullImage == null) {
+				slide(pic, "normal");
+			 } else {
+				 slide(fullImage, "reverse");
+				 if (pic !== fullImage) {
+					 setTimeout(function(){ slide(pic, "normal"); }, 20000);
+				 }
+			 }
+// });
+}
+
+
+
+
+
+(function (){
+  let num = 1;
+  const pics = document.querySelectorAll('.pic')
+  pics.forEach(pic=> {
+    setTimeout(function name() {
+      console.log("pics", num+=1)
+    },20000)
+  })
+
+})();
+
+
+////////
+
+	imageArea.addEventListener("click", function(e) {
+		let fullImage = document.querySelector(".full");
+    console.log(e)
+		if (fullImage == null) {
+				slide(e.target, "normal");
+			 } else {
+				 slide(fullImage, "reverse");
+				 if (e.target !== fullImage) {
+					 setTimeout(function(){ slide(e.target, "normal"); }, 200);
+				 }
+			 }
+	})
+}
+
+    </script>
+   
+  </body>
+
+ 
+</html>

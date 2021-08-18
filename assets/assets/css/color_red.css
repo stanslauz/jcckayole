@@ -1,0 +1,90 @@
+/*
+* Color
+*/
+
+/*
+* Background color
+*/
+
+.bg-base-color {
+  background-color: purple !important;
+}
+
+/*
+* Border color
+*/
+
+.border-base-color {
+  border-color: purple !important;
+}
+
+/*
+* Button color
+*/
+
+.btn-base-color {
+  background-color: purple !important;
+}
+
+/*
+* Button color - hover
+*/
+
+.btn-hover-base-color:hover {
+  background-color: purple !important;
+}
+
+/*
+* Flickity
+*/
+
+.carousel-custom .flickity-page-dots .dot.is-selected {
+  background: purple;
+}
+
+/*
+* Heading style
+*/
+
+.title-underline-base-color {
+  border-color: purple;
+}
+.title-underline-thick-base-color {
+  border-color: purple;
+}
+.title-sideline-base-color:before {
+  background-color: purple;
+}
+
+/*
+* Preloader
+*/
+
+.pace .pace-progress {
+  background-color: purple;
+}
+
+/*
+* Text color
+*/
+
+.text-base-color {
+  color: purple !important;
+}
+
+/*
+* Triangle
+*/
+
+.triangle-top-right.triangle-base-color {
+  border-color: transparent purple transparent transparent;
+}
+.triangle-top-left.triangle-base-color {
+  border-color: purple transparent transparent transparent;
+}
+.triangle-bottom-right.triangle-base-color {
+  border-color: transparent transparent purple transparent;
+}
+.triangle-bottom-left.triangle-base-color {
+  border-color: transparent transparent transparent purple;
+}

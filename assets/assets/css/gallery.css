@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+#sidle.slide {
+  position: relative;
+  width: 50%;
+}
+#sidle.slide img {
+  position: absolute;
+  width: 100%;
+}
+#sidle.slide img:hover {
+  cursor: pointer;
+}
+#sidle.slide .full:hover {
+  cursor: default;
+}
+#sidle:not(.slide) {
+  width: 98%;
+  margin: 0 auto;
+}
+#sidle:not(.slide) img {
+  width: 48%;
+  display: inline-block;
+}
+@media all and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  #sidle.slide {
+    width: 100%;
+  }
+  #sidle.slide img {
+    position: static;
+    width: 100% !important;
+    display: inline-block;
+    -webkit-clip-path: none !important;
+  }
+}
+
+/*
+* Navigation
+*/
+.navTitle {
+  font-weight: 800;
+  color: purple;
+  border: thin;
+  /* border-style: solid; */
+  padding: 10px;
+}
+.navbar,
+.navbar-header,
+.navbar-brand img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.navbar {
+  background-color: white !important;
+  opacity: 0.98;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.navbar.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+.navbar-header {
+  align-items: center;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 80px;
+  justify-content: space-between;
+  line-height: 80px;
+}
+.navbar-brand {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.navbar-brand img {
+  height: 46px;
+  left: auto;
+  position: absolute;
+  top: 17px;
+}
+.navbar-brand img.logo-text-black {
+  opacity: 0;
+}
+.navbar-toggler {
+  border-color: purple !important;
+
+  margin-right: 1rem;
+}
+.navbar .nav-item {
+  padding: 8px 0;
+}
+.navbar .nav-link {
+  color: purple !important;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.688rem;
+  letter-spacing: 1px;
+  padding: 0 !important;
+  position: relative;
+  text-transform: uppercase;
+}
+.navbar .nav-link.active:before {
+  background-color: #ffffff !important;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin-bottom: -2px;
+  position: absolute;
+  width: 100%;
+}
+
+.navbarPaged {
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 17px -8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 8px 17px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 17px -8px rgba(0, 0, 0, 0.1);
+}

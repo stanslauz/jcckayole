@@ -1,0 +1,357 @@
+/*
+* Style
+*/
+
+/*
+* Google font
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto");
+
+/*
+* Section - Home
+*/
+
+/** BG Image */
+#home {
+  background-image: url("../images/lakewood.jpg");
+  background-attachment: cover;
+}
+
+/** BG Parallax */
+#home-bg-parallax > .bg-parallax {
+  background: url("../images/lakewood.jpg");
+}
+#manuals {
+  margin: 10px;
+}
+/** BG Slider */
+#home-bg-slider .flickity-slider > .carousel-cell:nth-child(1) {
+  background: url("../images/lakewood.jpg");
+}
+#home-bg-slider .flickity-slider > .carousel-cell:nth-child(2) {
+  background: url("../images/bg-home-2.jpg");
+}
+#home-bg-slider .flickity-slider > .carousel-cell:nth-child(3) {
+  background: url("../images/bg-home-3.jpg");
+}
+
+/** BG Video */
+#home-bg-video .player:before {
+  z-index: 15;
+}
+#home-bg-video .player.is-mobile {
+  display: none;
+}
+#home-bg-video .container {
+  position: relative;
+  z-index: 20;
+}
+
+/*
+* Section - Support
+*/
+
+#support {
+  background-image: url("../images/bible.jpg");
+}
+.giantSlayerImage {
+  background-image: url("../images/goliath.jpg");
+  /* background-attachment: cover; */
+  background-size: cover;
+  height: fit-content;
+}
+.pillarbg {
+  background-image: url("../images/Pillars.jpg");
+  /* background-attachment: cover; */
+  background-size: cover;
+  height: fit-content;
+  opacity: none;
+}
+/*
+* Section - Milestones
+*/
+
+#milestones {
+  background-image: url("../images/bg-milestones.jpg");
+}
+
+/*
+* Section - Pricing
+*/
+
+#pricing {
+  background-image: url("../images/bg-pricing.jpg");
+}
+
+/*
+* Section - Contact
+*/
+
+.contact-card {
+  opacity: 0.98;
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 150px;
+}
+.contact-card img {
+  left: 0;
+  max-height: 8vh;
+  position: relative;
+  top: 0;
+  z-index: 15;
+}
+.contact-card-block {
+  left: 0;
+  padding: 0 30px 0 175px;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+
+#youtube a {
+  color: #333;
+}
+
+/*
+* Footer
+*/
+
+.footer-logo {
+  max-height: 40px;
+}
+.footer-icon-social {
+  bottom: 10px;
+  position: relative;
+}
+
+/*
+ * Social
+ */
+
+#social .fa {
+  font-size: 3em;
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  color: #fff;
+  border-radius: 0.8em; /* or 50% width & line-height */
+}
+
+.logo-small {
+  display: none;
+}
+@media (max-width: 2000px) and (min-width: 1200px) {
+  .believebox {
+    width: 70%;
+  }
+}
+@media (max-width: 1199px) and (min-width: 991px) {
+  .slide > img {
+    height: 80%;
+    /* position: absolute; */
+  }
+  .logo-small {
+    display: block;
+  }
+  .logo-large {
+    display: none;
+  }
+  .believebox {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .slide > img {
+    height: 80%;
+    /* position: absolute;s */
+  }
+  .slider__btn--left {
+    display: none;
+  }
+  .slider__btn--right {
+    display: none;
+  }
+  .believebox {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .slide > img {
+    height: 80%;
+  }
+  .slider__btn--left {
+    display: none;
+  }
+  .slider__btn--right {
+    display: none;
+  }
+  .logo-small {
+    display: block;
+  }
+  .logo-large {
+    display: none;
+  }
+  .believebox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  /* body,
+  html {
+    height: 100%;
+  } */
+  .slide > img {
+    height: 80%;
+  }
+  .slider__btn--left {
+    display: none;
+  }
+  .slider__btn--right {
+    display: none;
+  }
+  #social .fa {
+    font-size: 1em;
+  }
+  .believebox {
+    width: 100%;
+  }
+  .tm-section-1 {
+    padding-bottom: 90px;
+    -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 92%, 0px 100%);
+    clip-path: polygon(0px 0px, 100% 0px, 100% 92%, 0px 100%);
+  }
+}
+/* the extra content */
+/* SLIDER */
+.slider {
+  width: 100%;
+  height: 50rem;
+  /* margin: 0 auto; */
+  /* position: relative; */
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 2s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+.slide > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  /* background: rgba(255, 255, 255, 0.7); */
+  font-family: inherit;
+  color: #333;
+  /* border-radius: 50%; */
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 3%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 3%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #fff;
+  opacity: 1;
+}
+.imageResize {
+  object-fit: contain;
+  width: 100%;
+  height: 50vh;
+  box-shadow: purple;
+  outline: purple;
+}
+.believe {
+  background-image: url("../images/believe.jpeg");
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+  padding: 12px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.believebox {
+  background-color: ivory;
+  padding: 5px;
+  border-radius: 10px;
+  border: purple;
+  border-style: solid;
+}
+.giantslayer {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+.giantflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
